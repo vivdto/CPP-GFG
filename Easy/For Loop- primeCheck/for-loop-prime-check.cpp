@@ -10,17 +10,17 @@ using namespace std;
 
 // Complete this function
 string isPrime(int n) {
-        for (int i = 2; i <= sqrt(n); i++) {
-       if(n%i==0)
-       return "No";
+     if(n==0 or n==1){
+            return "No";
     }
-    if(n==0 || n==1)
-    return "No";
+    for (int i = 2; i <= sqrt(n); i++) {
+         
+        if(n%i==0){
+            return "No";
+        }
+    }
+            return "Yes";
     
-    return "Yes";
-
-
-
 }
 
 //{ Driver Code Starts.
