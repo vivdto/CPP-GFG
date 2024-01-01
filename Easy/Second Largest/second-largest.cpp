@@ -13,20 +13,36 @@ public:
 	    // code here
 	    
 	    
-	     int large = arr[0], large2 = -1;
+	    int Largest = arr[0], secondLargest = -1;
 	    for(int i=1; i<n; i++)
 	    {
-	        if(arr[i] > large)
+	        if(arr[i] > Largest)
 	        {
-	            large2 = large;
-	            large = arr[i];
+	            secondLargest = Largest;
+	            Largest = arr[i];
 	        }
-	        else if(arr[i] < large)
+	        else if(arr[i] < Largest)
 	        {
-	            large2 = large2 > arr[i] ? large2 : arr[i];
+	            secondLargest = secondLargest > arr[i] ? secondLargest : arr[i];
+	            
+	            //condition ? expression_if_true : expression_if_false;
+                /*
+                
+                In this case:
+
+condition: secondLargest > arr[i]
+expression_if_true: secondLargest
+expression_if_false: arr[i]
+So, the line can be read as follows:
+
+"If secondLargest is greater than the current element arr[i], then keep secondLargest unchanged; otherwise, update secondLargest with the value of arr[i]."
+
+*/
+
+
 	        }
 	    }
-	    return large2;
+	    return secondLargest;
 
 	}
 };
