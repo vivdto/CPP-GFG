@@ -10,13 +10,18 @@ class Solution{
     void printNos(int N)
     {
         //Your code here
-
-
-    if ( N > 1 ) printNos( N - 1 );
-    cout << N << ' ';
-
+        
+    { 
+        if(N==0)
+        return;
+      
+      printNos(N-1);
+     
+      cout<<N<<" ";  
+      
     }
-    
+        
+        }
 };
 
 //{ Driver Code Starts.
