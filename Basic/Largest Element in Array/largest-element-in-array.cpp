@@ -12,14 +12,17 @@ class Solution
 public:
     int largest(vector<int> &arr, int n)
     {
+        int largest;
+        largest = arr[0];
         
-        int max = 0;
-        for (int i =0; i<n; i++)
+        for (int i = 0; i<n; i++)
         {
-            if(arr[i]>max)
-            max=arr[i];
+            if(arr[i]>largest)
+            largest = arr[i];
+            
         }
-return max;        
+        
+        return largest;
     }
 };
 
